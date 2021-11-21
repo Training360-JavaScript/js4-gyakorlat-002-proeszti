@@ -40,7 +40,7 @@ describe('1. feladat', () => {
                 startFetch: window.startFetch,
             };
         });
-
+        console.log(pageData);
         expect(pageData.startFetch).toBeTruthy();
     });
 
@@ -73,5 +73,5 @@ describe('1. feladat', () => {
 
         expect(pageData.serverData.length).toEqual(5);
     });
-    
+
 });

@@ -10,9 +10,17 @@ const getProductData = () => productData;
  * @returns {[{name: string}]} a name alapján rendezett tömb
  */
 const sortProducts = (products = [{ name: '' }]) => {
+
     // itt dolgozz
 };
-
+const getProducts = (url = '') => {
+    fetch(url)
+        .then(response => response.json())
+        .then(data => productData = data)
+        .catch(
+            () => console.log(`Error: ${url} is not found!`),
+        );
+}
 /**
  * TODO: hozd létre a getProducts függvényt! 
  * 
@@ -43,6 +51,6 @@ const sortProducts = (products = [{ name: '' }]) => {
  * TODO: exportáld ki helyesen a getProducts függvényt!
  */
 export {
-    
+    getProducts,
     getProductData,
 }
